@@ -15,6 +15,7 @@ from questeval.utils import (
     extract_table_answers,
     text2hash
 )
+from tqdm import tqdm
 
 HF_ORGANIZATION = "ThomasNLG"
 
@@ -191,7 +192,7 @@ class QuestEval:
             assert len(sources) == len(hypothesis)
 
         scores = []
-        for ex_idx in range(0, len(hypothesis), batch_size):
+        for ex_idx in tqdm(range(0, len(hypothesis), batch_size)):
             logging.info(f"Total examples: {len(hypothesis)}. Proceeding the examples {ex_idx}")
             batch_sources, batch_list_references = None, None
             if having_sources:
