@@ -1,4 +1,4 @@
-# QuestEval
+# QuestEval - forked for evaluating FEC
 ![GitHub](https://img.shields.io/github/license/ThomasScialom/QuestEval)
 ![release](https://img.shields.io/github/v/release/ThomasScialom/QuestEval)
  
